@@ -1,61 +1,88 @@
-# Job Posting Website
+Job Posting Website
 
-A full-stack **Job Posting Platform** built with **Next.js**, **Prisma ORM**, and **Neon Database**.  
-This application allows users to post jobs, search for jobs, and manage applications through a personalized dashboard.  
+A full-stack Job Posting Platform built with Next.js, Prisma ORM, and Neon Database. This application allows users to post jobs, search for jobs, and manage applications through a personalized dashboard.
 
----
+Features
 
-## 🚀 Tech Stack
-- **Frontend:** [Next.js](https://nextjs.org/) (React framework with server-side rendering & API routes)
-- **ORM:** [Prisma](https://www.prisma.io/) (Type-safe database client)
-- **Database:** [Neon](https://neon.tech/) (Serverless Postgres)
+Job Posting: Employers can create and manage job listings.
 
----
+Job Search: Job seekers can search and filter job listings.
 
-## ✨ Features
-- 🔹 **Job Posting** – Employers can create and manage job listings  
-- 🔹 **Job Searching** – Search and filter available jobs  
-- 🔹 **Dashboard** – Personalized dashboard for users to track jobs and applications  
-- 🔹 **Authentication** – Secure login system with session management  
-- 🔹 **Responsive UI** – Optimized for desktop and mobile  
+User Dashboard: Personalized dashboards for job seekers and employers to manage their profiles and applications.
 
----
+Tech Stack
 
-## 📂 Project Structure
+Frontend: Next.js
 
-my-next-app/
-│── app/ # Next.js App Router pages & APIs
-│── components/ # Reusable UI components
-│── prisma/ # Prisma schema & migrations
-│── public/ # Static assets (images, logos)
-│── lib/ # Utility functions (auth, db client)
+Backend: Node.js
 
+Database: Neon (via Prisma ORM)
 
-## ⚙️ Getting Started
+Authentication: NextAuth.js
 
-### 1. Clone the repository
-```bash
-git clone https://github.com/<your-username>/job-posting-website.git
-cd job-posting-website
+Styling: Tailwind CSS
 
+Prerequisites
 
-2. Install dependencies
+Ensure you have the following installed:
+
+Node.js
+ (v16 or higher)
+
+npm
+ (comes with Node.js)
+
+Neon Database
+ account and project setup
+
+Setup Instructions
+1. Clone the Repository
+git clone https://github.com/harsha0679/Job-posting-website-
+cd Job-posting-website-
+
+2. Install Dependencies
 npm install
 
-3. Set up environment variables
+3. Configure Environment Variables
 
-Create a .env file in the root directory:
+Create a .env file in the root directory and add the following variables:
 
-DATABASE_URL="your-neon-database-url"
-NEXTAUTH_SECRET="your-random-secret"
+DATABASE_URL="your_neon_database_url"
+NEXTAUTH_SECRET="your_nextauth_secret"
 NEXTAUTH_URL="http://localhost:3000"
 
-4. Run Prisma migrations
-npx prisma migrate dev
 
-5. Start the development server
+Replace your_neon_database_url with your Neon database connection string and your_nextauth_secret with a secure string.
+
+4. Set Up Prisma
+
+Generate the Prisma client and apply migrations:
+
+npx prisma generate
+npx prisma migrate deploy
+
+5. Run the Development Server
+
+Start the application:
+
 npm run dev
 
 
+The application will be accessible at http://localhost:3000
+.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Usage
+
+Job Seekers: Register an account to browse and apply for jobs.
+
+Employers: Create an account to post job listings and manage applications.
+
+Deployment
+
+For deployment, consider using platforms like Vercel
+ or Netlify
+. Ensure your environment variables are properly configured in the deployment platform's settings.
+
+Contributing
+
+Contributions are welcome! Please fork the repository, create a new branch, and submit a pull request with your proposed changes.
